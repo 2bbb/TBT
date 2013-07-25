@@ -1,9 +1,8 @@
 //
 //  TBToaster.h
-//  GlitchCamera
 //
-//  Created by ISHII Tsuubito on 13/02/07.
-//  Copyright (c) 2013年 buffer Renaiss co., ltd. All rights reserved.
+//  Created by ISHII 2bit on 13/02/07.
+//  Copyright (c) 2013 buffer Renaiss co., ltd. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
