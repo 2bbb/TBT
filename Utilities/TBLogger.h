@@ -107,6 +107,13 @@ __TB_DEFINE_COLOR__(ERROR, 255, 0, 0)
 #define IfError(...) ;
 #endif // end of ifdef LOG_ERROR
 
+static void TBUncaughtExceptionHandler(NSException *exception) {
+    LogError(@"Exception: %@", exception);
+    LogError(@"Call stack symbols:\n%@", [exception callStackSymbols]);
+}
+
+#define TBLoggerEnablePrintCallStackSymbols() NSSetUncaughtExceptionHandler(&TBUncaughtExceptionHandler);
+
 #pragma GCC diagnostic warning "-Wunused-variable"
 
 #endif // end of ifdef __OBJC__
