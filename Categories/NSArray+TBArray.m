@@ -16,6 +16,10 @@
     return [self count] ? [self objectAtIndex:0] : nil;
 }
 
+- (NSArray *)reversedArray {
+    return [[self reverseObjectEnumerator] allObjects];
+}
+
 - (id)objectAtCroppedIndex:(NSInteger)n {
 	n = (n < 0) ? 0 : (n < [self count] ? n : [self count] - 1);
 	return [self objectAtIndex:n];

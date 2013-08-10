@@ -17,6 +17,7 @@
 @interface NSArray (TBArray)
 
 - (id)firstObject;
+- (NSArray *)reversedArray;
 
 - (id)objectAtCroppedIndex:(NSInteger)n;
 - (id)objectAtIndex:(NSInteger)n withDefaultValue:(id)value;
