@@ -10,6 +10,6 @@
 
 @interface NSMutableURLRequest (PostRequestExtention)
 
-
+- (void)addPostData:(NSData *)data forKey:(NSString *)key;
 
 @end
