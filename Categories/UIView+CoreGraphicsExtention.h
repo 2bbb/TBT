@@ -10,4 +10,7 @@
 
 @interface UIView (CoreGraphicsExtention)
 
+- (UIImage *)capture;
+- (UIImage *)capturePresentationLayer;
+
 @end
