@@ -58,7 +58,7 @@
 }
 
 - (CGFloat)top {
-    return self.origin.x;
+    return self.origin.y;
 }
 
 - (void)setTop:(CGFloat)top {
