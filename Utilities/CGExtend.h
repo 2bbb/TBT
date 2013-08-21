@@ -8,6 +8,5 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CGExtend : NSObject
-
-@end
+CGRect CGRectMakeFromOriginAndSize(CGPoint point, CGSize size);
+CGRect CGRectTranslateVec(CGRect rect, CGPoint vec);

@@ -8,6 +8,12 @@
 
 #import "CGExtend.h"
 
-@implementation CGExtend
+CGRect CGRectMakeFromOriginAndSize(CGPoint origin, CGSize size) {
+    return (CGRect){.origin = origin, .size = size};
+}
 
-@end
+CGRect CGRectTranslateVec(CGRect rect, CGPoint vec) {
+    rect.origin.x += vec.x;
+    rect.origin.y += vec.y;
+    return rect;
+}
