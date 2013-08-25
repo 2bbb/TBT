@@ -8,8 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString * const kPostFileData;
+extern NSString * const kPostFileName;
+extern NSString * const kPostFileMimeType;
+
 @interface NSMutableURLRequest (PostRequestExtention)
 
-- (void)addPostData:(NSData *)data forKey:(NSString *)key;
++ (NSMutableURLRequest *)postRequestForURL:(NSString *)urlString
+                        withPostParameters:(NSDictionary *)postParameters
+                              andPostFiles:(NSDictionary *)postFiles;
 
 @end
