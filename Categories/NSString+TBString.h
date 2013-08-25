@@ -13,6 +13,7 @@
 
 
 #import <Foundation/Foundation.h>
+#import <CommonCrypto/CommonCrypto.h>
 
 @interface NSString (TBString)
 
@@ -22,6 +23,7 @@
 - (NSString *)urlDecode;
 - (NSString *)escapeHtml;
 - (NSString *)unescapeHtml;
+- (NSString *)md5String;
 
 @end
 
