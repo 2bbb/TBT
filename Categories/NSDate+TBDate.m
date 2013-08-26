@@ -23,7 +23,6 @@
 	NSDateComponents *components = [cal components:unitFlags fromDate:date];
 	int month = [components day];
 	
-	[cal release];
 	return month;
 }
 
@@ -38,7 +37,6 @@
 	NSDateComponents *components = [cal components:unitFlags fromDate:date];
 	int month = [components month];
 	
-	[cal release];
 	return month;
 }
 
@@ -53,7 +51,6 @@
 	NSDateComponents *components = [cal components:unitFlags fromDate:date];
 	int year = [components year];
 	
-	[cal release];
 	return year;
 }
 
