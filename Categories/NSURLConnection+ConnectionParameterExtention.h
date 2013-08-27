@@ -11,5 +11,6 @@
 @interface NSURLConnection (ConnectionParameterExtention)
 
 - (NSString *)originalRequestURLString;
+- (BOOL)originalRequestURLStringIsEqualToString:(NSString *)urlString;
 
 @end

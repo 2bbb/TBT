@@ -63,7 +63,7 @@
 }
 
 + (NSDictionary *)getCalenderDatas:(NSDate *)date {
-	NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithCapacity:6];
+	NSMutableDictionary *dict = [[[NSMutableDictionary alloc] initWithCapacity:6] autorelease];
 	
 	NSCalendar* cal = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
 	unsigned int unitFlags = NSYearCalendarUnit |

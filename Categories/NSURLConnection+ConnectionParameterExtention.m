@@ -14,4 +14,8 @@
     return [[[self originalRequest] URL] absoluteString];
 }
 
+- (BOOL)originalRequestURLStringIsEqualToString:(NSString *)urlString {
+    return [[self originalRequestURLString] isEqualToString:urlString];
+}
+
 @end

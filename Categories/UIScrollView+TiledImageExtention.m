@@ -16,7 +16,7 @@
     CGFloat horizontalOffset = isHorizontal ? size.width : 0.0f;
     CGFloat verticalOffset = isHorizontal ? 0.0f : size.height;
     
-    NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:num];
+    NSMutableArray *array = [[[NSMutableArray alloc] initWithCapacity:num] autorelease];
     
     for(int i = 0; i < num; i++) {
         CGRect frame;
