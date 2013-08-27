@@ -6,6 +6,7 @@
 //
 
 #import "UIViewController+RapidWriteExtention.h"
+#import "UIView+ProperyExtention.h"
 #import <QuartzCore/QuartzCore.h>
 
 @implementation UIViewController (RapidWriteExtention)
@@ -74,4 +75,49 @@
 - (IBAction)dismissViewController {
     [self dismissModalViewControllerAnimated:YES];
 }
+
+const static NSInteger _kIndicatorWrapperTag = 11195;
+const static NSInteger _kIndicatorTag = 11196;
+
+- (void)createActivityIndicatorView {
+    UIView *view = [[[UIView alloc] initWithFrame:[self view].bounds] autorelease];
+    [view setBackgroundColor:[UIColor colorWithRed:0.0f
+                                             green:0.0f
+                                              blue:0.0f
+                                             alpha:0.6f]];
+    UIActivityIndicatorView *ai = [[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge] autorelease];
+    [view addSubview:ai];
+    ai.centerX = view.width * 0.5f;
+    ai.centerY = view.height * 0.5f;
+    [view setAlpha:0.0f];
+    [[self view] addSubview:view];
+    [view setTag:_kIndicatorWrapperTag];
+    [ai setTag:_kIndicatorTag];
+    [UIView animateWithDuration:0.3f
+                     animations:^{
+                         [view setAlpha:1.0f];
+                     }
+                     completion:^(BOOL _) {
+                         [ai startAnimating];
+                     }];
+}
+
+- (void)destroyActivityIndicatorView {
+    __block UIView *view = [[self view] viewWithTag:_kIndicatorWrapperTag];
+    [UIView animateWithDuration:0.3f
+                     animations:^{
+                         [view setAlpha:0.0f];
+                     }
+                     completion:^(BOOL _) {
+                         UIActivityIndicatorView *ai = (UIActivityIndicatorView *)[view viewWithTag:_kIndicatorTag];
+                         [ai performSelectorInBackground:@selector(stopAnimating)
+                                              withObject:nil];
+                         [view removeFromSuperview];
+                     }];
+}
+
+- (BOOL)isShowActivityIndicatorViewNow {
+    return [[self view] viewWithTag:_kIndicatorTag] != nil;
+}
+
 @end

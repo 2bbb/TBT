@@ -25,4 +25,8 @@
 
 - (IBAction)dismissViewController;
 
+- (void)createActivityIndicatorView;
+- (void)destroyActivityIndicatorView;
+- (BOOL)isShowActivityIndicatorViewNow;
+
 @end
