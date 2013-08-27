@@ -12,6 +12,7 @@
 #import "NSDate+TBDate.h"
 #import "NSString+TBString.h"
 #import "NSURLRequest+TBFaster.h"
+#import "NSURLConnection+ConnectionParameterExtention.h"
 
 #import "UIColor+TBFastExtention.h"
 #import "UIView+ProperyExtention.h"
