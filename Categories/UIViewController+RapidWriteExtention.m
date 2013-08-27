@@ -9,6 +9,14 @@
 #import "UIView+ProperyExtention.h"
 #import <QuartzCore/QuartzCore.h>
 
+#ifndef LogTrace
+#define LogTrace NSLog
+#endif
+
+#ifndef LogWarning
+#define LogWarning NSLog
+#endif
+
 @implementation UIViewController (RapidWriteExtention)
 
 + (id)viewControllerWithNibName:(NSString *)nibName {
@@ -20,10 +28,10 @@
     if(500 < [[UIScreen mainScreen] applicationFrame].size.height) {
         NSString *nibName4inch = [NSString stringWithFormat:@"%@_4inch", nibName];
         if([[NSBundle mainBundle] pathForResource:nibName4inch ofType:@"nib"]) {
-            NSLog(@"%@ exists", nibName4inch);
+            LogTrace(@"%@ exists", nibName4inch);
             nibName = nibName4inch;
         } else {
-            NSLog(@"... %@ don't exists", nibName4inch);
+            LogWarning(@"... %@ don't exists", nibName4inch);
         }
     }
     return [self viewControllerWithNibName:nibName];
@@ -73,7 +81,11 @@
 }
 
 - (IBAction)dismissViewController {
+#ifdef __IPHONE_6_0
+    [self dismissViewControllerAnimated:YES completion:^{}];
+#else
     [self dismissModalViewControllerAnimated:YES];
+#endif
 }
 
 const static NSInteger _kIndicatorWrapperTag = 11195;
