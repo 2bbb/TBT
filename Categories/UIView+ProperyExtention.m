@@ -20,7 +20,7 @@
 }
 
 - (CGFloat)centerY {
-    return self.center.x;
+    return self.center.y;
 }
 
 - (void)setCenterY:(CGFloat)centerY {
