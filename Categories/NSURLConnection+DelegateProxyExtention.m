@@ -7,10 +7,38 @@
 
 #import "NSURLConnection+DelegateProxyExtention.h"
 
-static NSString *NSURLRequestMethodGET    = @"GET";
-static NSString *NSURLRequestMethodPOST   = @"POST";
-static NSString *NSURLRequestMethodPUT    = @"PUT";
-static NSString *NSURLRequestMethodDELETE = @"DELETE";
+#pragma GCC diagnostic ignored "-Wunused-variable"
+#pragma GCC diagnostic ignored "-Wunused-function"
+
+#if __clang__
+#   pragma clang diagnostic push
+#   pragma clang diagnostic ignored "-Wunused-variable"
+#   pragma clang diagnostic ignored "-Wunused-function"
+#endif
+
+NSString *NSURLRequestMethodGET    = @"GET";
+NSString *NSURLRequestMethodPOST   = @"POST";
+NSString *NSURLRequestMethodPUT    = @"PUT";
+NSString *NSURLRequestMethodDELETE = @"DELETE";
+
+#if __clang__
+#   pragma clang diagnostic pop
+#endif
+
+#pragma GCC diagnostic warning "-Wunused-function"
+#pragma GCC diagnostic warning "-Wunused-variable"
+
+@implementation NSURLConnectionProxy
+
+- (id)initWithCompletionBlock:(NSURLConnectionDownloadCompletionBlock)_block {
+    if(self = [super init]) {
+        block = [_block retain];
+    }
+    
+    return self;
+}
+
+@end
 
 @implementation NSURLConnection (DelegateProxyExtention)
 

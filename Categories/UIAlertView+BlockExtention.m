@@ -7,6 +7,10 @@
 
 #import "UIAlertView+BlockExtention.h"
 
+#if !__has_feature(objc_arc)
+#error This code needs compiler option -fno-objc-arc
+#endif
+
 @interface UIAlertViewCallback : NSObject <UIAlertViewDelegate> {
     UIAlertViewCallbackBlock callback;
 }

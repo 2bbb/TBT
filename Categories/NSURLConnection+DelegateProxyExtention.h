@@ -10,6 +10,11 @@
 
 typedef void (^NSURLConnectionDownloadCompletionBlock)();
 
+extern NSString *NSURLRequestMethodGET;
+extern NSString *NSURLRequestMethodPOST;
+extern NSString *NSURLRequestMethodPUT;
+extern NSString *NSURLRequestMethodDELETE;
+
 @interface NSURLConnectionProxy  : NSObject
 <
     NSURLConnectionDelegate
@@ -18,18 +23,6 @@ typedef void (^NSURLConnectionDownloadCompletionBlock)();
 }
 
 - (id)initWithCompletionBlock:(NSURLConnectionDownloadCompletionBlock)block;
-
-@end
-
-@implementation NSURLConnectionProxy
-
-- (id)initWithCompletionBlock:(NSURLConnectionDownloadCompletionBlock)_block {
-    if(self = [super init]) {
-        block = [_block retain];
-    }
-    
-    return self;
-}
 
 @end
 
