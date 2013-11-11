@@ -13,5 +13,8 @@
 - (CGSize)currentSize;
 - (CGFloat)currentHeight;
 
+-(void)resizeToStretch;
+-(float)expectedWidth;
+
 @end
 
