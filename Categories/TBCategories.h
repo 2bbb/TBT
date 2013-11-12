@@ -13,6 +13,7 @@
 #import "NSString+TBString.h"
 #import "NSURLRequest+TBFaster.h"
 #import "NSURLConnection+ConnectionParameterExtention.h"
+#import "NSMutableURLRequest+PostRequestExtention.h"
 
 #import "UIColor+TBFastExtention.h"
 #import "UIView+ProperyExtention.h"
