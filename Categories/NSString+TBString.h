@@ -25,6 +25,7 @@
 - (NSString *)unescapeHtml;
 - (NSString *)md5String;
 + (NSString *)formatedNumberString:(NSInteger)number;
++ (NSString *)jsonStringFromObject:(id)jsonObject;
 
 @end
 

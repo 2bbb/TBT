@@ -112,6 +112,20 @@
     return string;
 }
 
++ (NSString *)jsonStringFromObject:(id)jsonObject {
+    NSError *error = nil;
+    NSData *jsonData =[NSJSONSerialization dataWithJSONObject:jsonObject
+                                                      options:0
+                                                        error:&error];
+    if(error) {
+        NSLog(@"[NSString jsonStringFromObject:] Error: %@", error);
+        return nil;
+    }
+    NSString *playbackDataStringify = [[[NSString alloc] initWithData:jsonData
+                                                             encoding:NSUTF8StringEncoding] autorelease];
+    return playbackDataStringify;
+}
+
 @end
 
 @implementation NSMutableString (TBMutableString)
