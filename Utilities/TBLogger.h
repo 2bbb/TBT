@@ -12,7 +12,7 @@
 
 #ifdef __OBJC__
 
-#define SET_LOG_LEVEL_TRACE
+//#define SET_LOG_LEVEL_TRACE
 
 #pragma GCC diagnostic ignored "-Wunused-variable"
 #pragma GCC diagnostic ignored "-Wunused-function"
