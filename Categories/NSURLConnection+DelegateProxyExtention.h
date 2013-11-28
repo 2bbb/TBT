@@ -10,26 +10,11 @@
 
 typedef void (^NSURLConnectionDownloadCompletionBlock)();
 
-@interface NSURLConnectionProxy  : NSObject
-<
-    NSURLConnectionDelegate
-> {
+@interface NSURLConnectionProxy  : NSObject <NSURLConnectionDelegate> {
     NSURLConnectionDownloadCompletionBlock block;
 }
 
 - (id)initWithCompletionBlock:(NSURLConnectionDownloadCompletionBlock)block;
-
-@end
-
-@implementation NSURLConnectionProxy
-
-- (id)initWithCompletionBlock:(NSURLConnectionDownloadCompletionBlock)_block {
-    if(self = [super init]) {
-        block = [_block retain];
-    }
-    
-    return self;
-}
 
 @end
 

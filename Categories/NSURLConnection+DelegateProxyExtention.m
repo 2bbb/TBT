@@ -9,8 +9,23 @@
 
 static NSString *NSURLRequestMethodGET    = @"GET";
 static NSString *NSURLRequestMethodPOST   = @"POST";
+
+#pragma GCC diagnostic ignored "-Wunused-variable"
 static NSString *NSURLRequestMethodPUT    = @"PUT";
 static NSString *NSURLRequestMethodDELETE = @"DELETE";
+#pragma GCC diagnostic warning "-Wunused-variable"
+
+@implementation NSURLConnectionProxy
+
+- (id)initWithCompletionBlock:(NSURLConnectionDownloadCompletionBlock)_block {
+    if(self = [super init]) {
+        block = [_block retain];
+    }
+    
+    return self;
+}
+
+@end
 
 @implementation NSURLConnection (DelegateProxyExtention)
 

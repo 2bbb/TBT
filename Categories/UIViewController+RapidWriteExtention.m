@@ -105,7 +105,7 @@ const static NSInteger _kIndicatorTag = 11196;
     [[self view] addSubview:view];
     [view setTag:_kIndicatorWrapperTag];
     [ai setTag:_kIndicatorTag];
-    [UIView animateWithDuration:0.3f
+    [UIView animateWithDuration:0.1f
                      animations:^{
                          [view setAlpha:1.0f];
                      }
@@ -115,12 +115,13 @@ const static NSInteger _kIndicatorTag = 11196;
 }
 
 - (void)destroyActivityIndicatorView {
-    __block UIView *view = [[self view] viewWithTag:_kIndicatorWrapperTag];
-    [UIView animateWithDuration:0.3f
+    [UIView animateWithDuration:0.1f
                      animations:^{
+                         UIView *view = [[self view] viewWithTag:_kIndicatorWrapperTag];
                          [view setAlpha:0.0f];
                      }
                      completion:^(BOOL _) {
+                         UIView *view = [[self view] viewWithTag:_kIndicatorWrapperTag];
                          UIActivityIndicatorView *ai = (UIActivityIndicatorView *)[view viewWithTag:_kIndicatorTag];
                          [ai performSelectorInBackground:@selector(stopAnimating)
                                               withObject:nil];
