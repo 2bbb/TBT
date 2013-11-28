@@ -12,8 +12,6 @@
 
 #ifdef __OBJC__
 
-#define SET_LOG_LEVEL_TRACE
-
 #pragma GCC diagnostic ignored "-Wunused-variable"
 
 #define TB_LOG_TRACE   16

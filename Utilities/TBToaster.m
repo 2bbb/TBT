@@ -6,6 +6,8 @@
 //
 
 #import "TBToaster.h"
+#import "UIView+ProperyExtention.h"
+#import "UILabel+TBLabelExtend.h"
 
 @implementation TBToaster
 
