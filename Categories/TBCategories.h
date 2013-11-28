@@ -18,6 +18,7 @@
 #import "UIView+ProperyExtention.h"
 #import "UIView+AnimationExtention.h"
 #import "UIView+CoreGraphicsExtention.h"
+#import "UIView+DebugExtention.h"
 #import "UIAlertView+BlockExtention.h"
 #import "UILabel+TBLabelExtend.h"
 #import "UIViewController+RapidWriteExtention.h"
