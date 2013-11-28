@@ -74,7 +74,7 @@ NSString * const kPostFileMimeType = @"PostFileType";
 //    str = [NSString stringWithFormat:@"--%@--", boundary];
 //    [postBodyData appendData:[str dataUsingEncoding:NSUTF8StringEncoding]];
 //    [postString appendString:str];
-    LogDebug(@"postString : \n%@", postString);
+//    LogDebug(@"postString : \n%@", postString);
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURLString:urlString];
     [request setValue:[NSString stringWithFormat:@"multipart/form-data, boundary=%@", boundary]

@@ -93,6 +93,39 @@
     return [NSString stringWithFormat:@"%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x", result[0], result[1], result[2], result[3], result[4], result[5], result[6], result[7], result[8], result[9], result[10], result[11], result[12], result[13], result[14], result[15]];
 }
 
++ (NSString *)formatedNumberString:(int)number {
+    NSString *string;
+    if(number < 1000) {
+        string = [NSString stringWithFormat:@"%d", number];
+    } else {
+        string = [NSString stringWithFormat:@"%03d", number % 1000];
+    }
+    while(1000 <= number) {
+        number /= 1000;
+        if(number < 1000) {
+            string = [[NSString stringWithFormat:@"%d,", number] stringByAppendingString:string];
+        } else {
+            string = [[NSString stringWithFormat:@"%03d,", number % 1000] stringByAppendingString:string];
+        }
+    }
+    
+    return string;
+}
+
++ (NSString *)jsonStringFromObject:(id)jsonObject {
+    NSError *error = nil;
+    NSData *jsonData =[NSJSONSerialization dataWithJSONObject:jsonObject
+                                                      options:0
+                                                        error:&error];
+    if(error) {
+//        NSLog(@"[NSString jsonStringFromObject:] Error: %@", error);
+        return nil;
+    }
+    NSString *playbackDataStringify = [[[NSString alloc] initWithData:jsonData
+                                                             encoding:NSUTF8StringEncoding] autorelease];
+    return playbackDataStringify;
+}
+
 @end
 
 @implementation NSMutableString (TBMutableString)

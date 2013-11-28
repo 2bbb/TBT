@@ -10,7 +10,15 @@
 
 typedef void (^NSURLConnectionDownloadCompletionBlock)();
 
-@interface NSURLConnectionProxy  : NSObject <NSURLConnectionDelegate> {
+extern NSString *NSURLRequestMethodGET;
+extern NSString *NSURLRequestMethodPOST;
+extern NSString *NSURLRequestMethodPUT;
+extern NSString *NSURLRequestMethodDELETE;
+
+@interface NSURLConnectionProxy  : NSObject
+<
+    NSURLConnectionDelegate
+> {
     NSURLConnectionDownloadCompletionBlock block;
 }
 

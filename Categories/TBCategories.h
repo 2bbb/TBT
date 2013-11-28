@@ -13,6 +13,7 @@
 #import "NSString+TBString.h"
 #import "NSURLRequest+TBFaster.h"
 #import "NSURLConnection+ConnectionParameterExtention.h"
+#import "NSMutableURLRequest+PostRequestExtention.h"
 
 #import "UIColor+TBFastExtention.h"
 #import "UIView+ProperyExtention.h"
@@ -21,6 +22,7 @@
 #import "UIView+DebugExtention.h"
 #import "UIAlertView+BlockExtention.h"
 #import "UILabel+TBLabelExtend.h"
+#import "UIButton+ToggleExtention.h"
 #import "UIViewController+RapidWriteExtention.h"
 #import "UIResponder+AppDelegateExtention.h"
 #import "UIScrollView+TiledImageExtention.h"
