@@ -10,6 +10,9 @@
 
 #ifdef __OBJC__
 
+#define DeclareSingleton(Klass) \
++ (Klass *)sharedManager;
+
 #define CreateSingletonInitialize(Klass) \
 static Klass *manager = nil;\
 \
@@ -22,9 +25,9 @@ static Klass *manager = nil;\
     return manager;\
 }
 
-#define SetSingletonARC(Klass)   CreateSingletonInitialize(Klass)
+#define DefineSingletonARC(Klass)   CreateSingletonInitialize(Klass)
 
-#define SetSingletonNoARC(Klass) \
+#define DefineSingletonNoARC(Klass) \
 CreateSingletonInitialize(Klass)\
 - (id)retain { return self; }\
 - (NSUInteger)retainCount { return UINT_MAX; }\
@@ -32,9 +35,9 @@ CreateSingletonInitialize(Klass)\
 - (id)autorelease { return self; }
 
 #if !__has_feature(objc_arc)
-#	define SetSingleton(Klass) SetSingletonNoARC(Klass)
+#	define DefineSingleton(Klass) DefineSingletonNoARC(Klass)
 #else
-#   define SetSingleton(Klass) SetSingletonARC(Klass)
+#   define DefineSingleton(Klass) DefineSingletonARC(Klass)
 #endif
 
 #endif /* __OBJC__ */
