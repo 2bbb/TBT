@@ -13,6 +13,7 @@
 
 
 #import <Foundation/Foundation.h>
+#import <CommonCrypto/CommonCrypto.h>
 
 @interface NSString (TBString)
 
@@ -22,6 +23,9 @@
 - (NSString *)urlDecode;
 - (NSString *)escapeHtml;
 - (NSString *)unescapeHtml;
+- (NSString *)md5String;
++ (NSString *)formatedNumberString:(NSInteger)number;
++ (NSString *)jsonStringFromObject:(id)jsonObject;
 
 @end
 

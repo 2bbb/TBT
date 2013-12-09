@@ -9,11 +9,18 @@
 
 @interface UIAlertView(BlocksExtension)
 
-typedef void (^UIAlertViewCallbackBlock)(NSInteger buttonIndex);
+typedef void (^UIAlertViewCallbackBlock)(UIAlertView *alertView, NSInteger buttonIndex);
 
 - (id)initWithTitle:(NSString *)title
             message:(NSString *)message
            callback:(UIAlertViewCallbackBlock)callback
+  cancelButtonTitle:(NSString *)cancelButtonTitle
+  otherButtonTitles:(NSString *)otherButtonTitles, ...;
+
+- (id)initWithTitle:(NSString *)title
+            message:(NSString *)message
+           callback:(UIAlertViewCallbackBlock)callback
+didDissmissCallback:(UIAlertViewCallbackBlock)didDissmissCallback
   cancelButtonTitle:(NSString *)cancelButtonTitle
   otherButtonTitles:(NSString *)otherButtonTitles, ...;
 

@@ -10,5 +10,6 @@
 @interface NSArray (TBShuffle)
 
 - (NSArray *)shuffledArray;
+- (id)objectAtRandom;
 
 @end

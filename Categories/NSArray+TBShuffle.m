@@ -22,4 +22,9 @@
     return [NSArray arrayWithArray:results];
 }
 
+- (id)objectAtRandom {
+    if([self count] == 0) return nil;
+    return [self objectAtIndex:rand() % [self count]];
+}
+
 @end
