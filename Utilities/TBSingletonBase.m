@@ -54,7 +54,7 @@ static NSMutableDictionary *_instances;
     return self;
 }
 
-- (unsigned)retainCount {
+- (NSUInteger)retainCount {
     return UINT_MAX;
 }
 
