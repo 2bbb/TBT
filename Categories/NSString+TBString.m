@@ -118,7 +118,7 @@
                                                       options:0
                                                         error:&error];
     if(error) {
-//        NSLog(@"[NSString jsonStringFromObject:] Error: %@", error);
+        LogError(@"[NSString jsonStringFromObject:] Error: %@", error);
         return nil;
     }
     NSString *playbackDataStringify = [[[NSString alloc] initWithData:jsonData
