@@ -38,9 +38,9 @@ NSString * const kPostFileMimeType = @"PostFileType";
             [postBodyData appendData:[str dataUsingEncoding:NSUTF8StringEncoding]];
             [postString appendString:str];
         }
-        str = [NSString stringWithFormat:@"--%@--\r\n", boundary];
-        [postString appendString:str];
-        [postBodyData appendData:[str dataUsingEncoding:NSUTF8StringEncoding]];
+//        str = [NSString stringWithFormat:@"--%@--\r\n", boundary];
+//        [postString appendString:str];
+//        [postBodyData appendData:[str dataUsingEncoding:NSUTF8StringEncoding]];
     }
     
     if(postFiles && 0 < [postFiles count]) {
