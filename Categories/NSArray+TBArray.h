@@ -16,10 +16,32 @@
 
 @interface NSArray (TBArray)
 
+/**
+ * syntax sugar:
+ *
+ * @return self[0]
+ */
 - (id)firstObject;
+
+/**
+ * non-destructive
+ *
+ * @return reversed array
+ */
 - (NSArray *)reversedArray;
 
+/**
+ *
+ *
+ * @return if n < 0 then self[0] else if self.count <= n then self[self.count-1] else self[n]
+ */
 - (id)objectAtCroppedIndex:(NSInteger)n;
+
+/**
+ *
+ *
+ * @return if n < 0 or self.count <= n then value else self[n]
+ */
 - (id)objectAtIndex:(NSInteger)n withDefaultValue:(id)value;
 
 - (NSArray *)map:(id (^)(id x))f;
