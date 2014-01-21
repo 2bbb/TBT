@@ -21,9 +21,9 @@
 	NSMinuteCalendarUnit |
 	NSSecondCalendarUnit;
 	NSDateComponents *components = [cal components:unitFlags fromDate:date];
-	int month = [components day];
+	NSInteger day = [components day];
 	
-	return month;
+	return day;
 }
 
 + (NSInteger)getMonth:(NSDate *)date {
@@ -35,7 +35,7 @@
 	NSMinuteCalendarUnit |
 	NSSecondCalendarUnit;
 	NSDateComponents *components = [cal components:unitFlags fromDate:date];
-	int month = [components month];
+	NSInteger month = [components month];
 	
 	return month;
 }
@@ -49,7 +49,7 @@
 	NSMinuteCalendarUnit |
 	NSSecondCalendarUnit;
 	NSDateComponents *components = [cal components:unitFlags fromDate:date];
-	int year = [components year];
+	NSInteger year = [components year];
 	
 	return year;
 }
@@ -74,12 +74,12 @@
 	NSSecondCalendarUnit;
 	NSDateComponents *components = [cal components:unitFlags fromDate:date];
 	
-	[dict setObject:[NSNumber numberWithInt:[components year]] forKey:@"year"];
-	[dict setObject:[NSNumber numberWithInt:[components month]] forKey:@"month"];
-	[dict setObject:[NSNumber numberWithInt:[components day]] forKey:@"day"];
-	[dict setObject:[NSNumber numberWithInt:[components hour]] forKey:@"hour"];
-	[dict setObject:[NSNumber numberWithInt:[components minute]] forKey:@"minute"];
-	[dict setObject:[NSNumber numberWithInt:[components second]] forKey:@"second"];
+	[dict setObject:@([components year]) forKey:@"year"];
+	[dict setObject:@([components month]) forKey:@"month"];
+	[dict setObject:@([components day]) forKey:@"day"];
+	[dict setObject:@([components hour]) forKey:@"hour"];
+	[dict setObject:@([components minute]) forKey:@"minute"];
+	[dict setObject:@([components second]) forKey:@"second"];
 	
 	return [NSDictionary dictionaryWithDictionary:dict];
 }
