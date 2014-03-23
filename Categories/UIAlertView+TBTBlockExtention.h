@@ -1,5 +1,5 @@
 //
-//  UIAlertView+BlockExtention.h
+//  UIAlertView+TBTBlockExtention.h
 //
 //  Created by ISHII Tsuubito on 12/10/05.
 //  Copyright (c) 2012 buffer Renaiss co., ltd. All rights reserved.

@@ -1,11 +1,11 @@
 //
-//  UIAlertView+BlockExtention.m
+//  UIAlertView+TBTBlockExtention.m
 //
 //  Created by ISHII Tsuubito on 12/10/05.
 //  Copyright (c) 2012 buffer Renaiss co., ltd. All rights reserved.
 //
 
-#import "UIAlertView+BlockExtention.h"
+#import "UIAlertView+TBTBlockExtention.h"
 
 @interface UIAlertViewCallback : NSObject <UIAlertViewDelegate> {
     UIAlertViewCallbackBlock callback;
