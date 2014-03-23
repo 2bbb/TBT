@@ -1,6 +1,6 @@
-/* **** **** **** **** **** **** **** **** **** **** **** **** * 
+/* **** **** **** **** **** **** **** **** **** **** **** **** *
  *                                                             *
- *  NSArray+TBArray.h                                          *
+ *  NSArray+TBTArray.h                                         *
  *                                                             *
  *  Created by ISHII 2bit on 12/08/06.                         *
  *  Copyright (c) 2012 buffer Renaiss. All rights reserved.    *
@@ -14,7 +14,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSArray (TBArray)
+@interface NSArray (TBTArray)
 
 /**
  * syntax sugar:

@@ -1,5 +1,5 @@
 //
-//  CAKeyframeAnimation+CustomEasingExtention.h
+//  CAKeyframeAnimation+TBTCustomEasingExtention.h
 //
 //  Created by ISHII 2bit on 2013/08/23.
 //  Copyright (c) 2013 buffer Renaiss co., ltd. All rights reserved.
@@ -7,12 +7,12 @@
 
 #import <QuartzCore/QuartzCore.h>
 
-typedef double (^CAKeyframeCustomEasingBlock)(double);
+typedef double (^TBTCAKeyframeCustomEasingBlock)(double);
 
-@interface CAKeyframeAnimation (CustomEasingExtention)
+@interface CAKeyframeAnimation (TBTCustomEasingExtention)
 
 + (CAKeyframeAnimation *)animationWithKeyPath:(NSString *)path
-                                     function:(CAKeyframeCustomEasingBlock)block
+                                     function:(TBTCAKeyframeCustomEasingBlock)block
                                     fromValue:(double)fromValue
                                       toValue:(double)toValue;
 
@@ -20,6 +20,6 @@ typedef double (^CAKeyframeCustomEasingBlock)(double);
                                           fromValue:(double)fromValue
                                             toValue:(double)toValue;
 
-extern CAKeyframeCustomEasingBlock CAKeyframeCustomEasingBounce;
+extern TBTCAKeyframeCustomEasingBlock TBTCAKeyframeCustomEasingBounce;
 
 @end

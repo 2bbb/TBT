@@ -1,16 +1,16 @@
 //
-//  CAKeyframeAnimation+CustomEasingExtention.m
+//  CAKeyframeAnimation+TBTCustomEasingExtention.m
 //
 //  Created by ISHII 2bit on 2013/08/23.
 //  Copyright (c) 2013 buffer Renaiss co., ltd. All rights reserved.
 //
 
-#import "CAKeyframeAnimation+CustomEasingExtention.h"
+#import "CAKeyframeAnimation+TBTCustomEasingExtention.h"
 
-@implementation CAKeyframeAnimation (CustomEasingExtention)
+@implementation CAKeyframeAnimation (TBTCustomEasingExtention)
 
 + (CAKeyframeAnimation *)animationWithKeyPath:(NSString *)path
-                                     function:(CAKeyframeCustomEasingBlock)block
+                                     function:(TBTCAKeyframeCustomEasingBlock)block
                                     fromValue:(double)fromValue
                                       toValue:(double)toValue
 {
@@ -36,12 +36,12 @@
                                             toValue:(double)toValue
 {
     return [self animationWithKeyPath:path
-                             function:CAKeyframeCustomEasingBounce
+                             function:TBTCAKeyframeCustomEasingBounce
                             fromValue:fromValue
                               toValue:toValue];
 }
 
-CAKeyframeCustomEasingBlock CAKeyframeCustomEasingBounce = ^double(double t) {
+TBTCAKeyframeCustomEasingBlock TBTCAKeyframeCustomEasingBounce = ^double(double t) {
     return fabs(cosf(3 * t * t * M_PI)) * (1.0f - t) * (1.0f - t);
 };
 

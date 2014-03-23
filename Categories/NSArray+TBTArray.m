@@ -1,6 +1,6 @@
-/* **** **** **** **** **** **** **** **** **** **** **** **** * 
+/* **** **** **** **** **** **** **** **** **** **** **** **** *
  *                                                             *
- *  NSArray+TBArray.m                                          *
+ *  NSArray+TBTArray.m                                         *
  *                                                             *
  *  Created by ISHII 2bit on 12/08/06.                         *
  *  Copyright (c) 2012 buffer Renaiss. All rights reserved.    *
@@ -8,9 +8,9 @@
  * **** **** **** **** **** **** **** **** **** **** **** **** */
 
 
-#import "NSArray+TBArray.h"
+#import "NSArray+TBTArray.h"
 
-@implementation NSArray (TBArray)
+@implementation NSArray (TBTArray)
 
 - (id)firstObject {
     return [self count] ? [self objectAtIndex:0] : nil;
@@ -81,7 +81,7 @@
 }
 
 - (NSArray *)excludeArrayBy:(NSArray *)array {
-	__block NSArray *_array = [[array copy] autorelease];
+	__block NSArray *_array = array;
 	return [self filteredArrayUsingBlocks:^(id x){
 		return [_array has:x];
 	}];

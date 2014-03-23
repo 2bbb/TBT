@@ -1,7 +1,7 @@
 //
-//  NSArray+TBNonObjectExtention.h
+//  NSArray+TBTNonObjectExtention.h
 //
-//  Created by ISHII Tsuubito on 12/10/18.
+//  Created by ISHII 2bit on 12/10/18.
 //  Copyright (c) 2012 buffer Renaiss co., ltd. All rights reserved.
 //
 
@@ -9,7 +9,7 @@
 
 #pragma mark get
 
-@interface NSArray (TBNonObjectExtention)
+@interface NSArray (TBTNonObjectExtention)
 
 - (BOOL)boolAtIndex:(NSUInteger)index;
 - (char)charAtIndex:(NSUInteger)index;

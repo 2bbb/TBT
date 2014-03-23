@@ -1,15 +1,15 @@
 //
-//  NSArray+TBNonObjectExtention.h
+//  NSArray+TBTNonObjectExtention.h
 //
-//  Created by ISHII Tsuubito on 12/10/18.
+//  Created by ISHII 2bit on 12/10/18.
 //  Copyright (c) 2012年 buffer Renaiss co., ltd. All rights reserved.
 //
 
-#import "NSArray+TBNonObjectExtention.h"
+#import "NSArray+TBTNonObjectExtention.h"
 
 #pragma mark getter
 
-@implementation NSArray (TBNonObjectExtention)
+@implementation NSArray (TBTNonObjectExtention)
 
 - (BOOL)boolAtIndex:(NSUInteger)index {
     return [[self objectAtIndex:index] boolValue];
