@@ -1,15 +1,15 @@
 //
-//  TBToaster.m
+//  TBTToaster.m
 //
 //  Created by ISHII 2bit on 13/02/07.
 //  Copyright (c) 2013 buffer Renaiss co., ltd. All rights reserved.
 //
 
-#import "TBToaster.h"
-#import "UIView+ProperyExtention.h"
-#import "UILabel+TBLabelExtend.h"
+#import "TBTToaster.h"
+#import "UIView+TBTProperyExtention.h"
+#import "UILabel+TBTLabelExtend.h"
 
-@implementation TBToaster
+@implementation TBTToaster
 
 + (void)toastFor:(UIView *)targetView
       withString:(NSString *)text
