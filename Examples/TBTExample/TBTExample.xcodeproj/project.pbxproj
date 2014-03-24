@@ -18,7 +18,7 @@
 		9557077B18DE7CF300542E88 /* NSURLConnection+TBTConnectionParameterExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 9557074418DE7CF300542E88 /* NSURLConnection+TBTConnectionParameterExtention.m */; };
 		9557077C18DE7CF300542E88 /* NSURLConnection+TBTDelegateProxyExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 9557074618DE7CF300542E88 /* NSURLConnection+TBTDelegateProxyExtention.m */; };
 		9557077D18DE7CF300542E88 /* NSURLRequest+TBTFaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 9557074818DE7CF300542E88 /* NSURLRequest+TBTFaster.m */; };
-		9557077E18DE7CF300542E88 /* UIAlertView+BlockExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 9557074A18DE7CF300542E88 /* UIAlertView+BlockExtention.m */; };
+		9557077E18DE7CF300542E88 /* UIAlertView+TBTBlockExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 9557074A18DE7CF300542E88 /* UIAlertView+TBTBlockExtention.m */; };
 		9557077F18DE7CF300542E88 /* UIButton+TBTToggleExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 9557074D18DE7CF300542E88 /* UIButton+TBTToggleExtention.m */; };
 		9557078018DE7CF300542E88 /* UIColor+TBTFastExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 9557074F18DE7CF300542E88 /* UIColor+TBTFastExtention.m */; };
 		9557078118DE7CF300542E88 /* UILabel+TBTLabelExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 9557075118DE7CF300542E88 /* UILabel+TBTLabelExtend.m */; };
@@ -30,11 +30,9 @@
 		9557078718DE7CF300542E88 /* UIView+TBTDebugExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 9557075D18DE7CF300542E88 /* UIView+TBTDebugExtention.m */; };
 		9557078818DE7CF300542E88 /* UIView+TBTProperyExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 9557075F18DE7CF300542E88 /* UIView+TBTProperyExtention.m */; };
 		9557078918DE7CF300542E88 /* UIViewController+TBTRapidWriteExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 9557076118DE7CF300542E88 /* UIViewController+TBTRapidWriteExtention.m */; };
-		9557078A18DE7CF300542E88 /* TBTAlertViewBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 9557076418DE7CF300542E88 /* TBTAlertViewBlock.m */; };
 		9557078B18DE7CF300542E88 /* TBTCGExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 9557076618DE7CF300542E88 /* TBTCGExtend.m */; };
 		9557078C18DE7CF300542E88 /* TBTHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9557076818DE7CF300542E88 /* TBTHTTPRequest.m */; };
-		9557078D18DE7CF300542E88 /* TBToaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 9557076B18DE7CF300542E88 /* TBToaster.m */; };
-		9557078E18DE7CF300542E88 /* TBTSingletonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9557076E18DE7CF300542E88 /* TBTSingletonBase.m */; };
+		9557078D18DE7CF300542E88 /* TBTToaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 9557076B18DE7CF300542E88 /* TBTToaster.m */; };
 		9557078F18DE7CF300542E88 /* TBTVector.c in Sources */ = {isa = PBXBuildFile; fileRef = 9557077118DE7CF300542E88 /* TBTVector.c */; };
 		95871AF618DE7B9B00B93E33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95871AF518DE7B9B00B93E33 /* Foundation.framework */; };
 		95871AF818DE7B9B00B93E33 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95871AF718DE7B9B00B93E33 /* CoreGraphics.framework */; };
@@ -86,8 +84,8 @@
 		9557074718DE7CF300542E88 /* NSURLRequest+TBTFaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+TBTFaster.h"; sourceTree = "<group>"; };
 		9557074818DE7CF300542E88 /* NSURLRequest+TBTFaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+TBTFaster.m"; sourceTree = "<group>"; };
 		9557074918DE7CF300542E88 /* TBTCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBTCategories.h; sourceTree = "<group>"; };
-		9557074A18DE7CF300542E88 /* UIAlertView+BlockExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+BlockExtention.m"; sourceTree = "<group>"; };
-		9557074B18DE7CF300542E88 /* UIAlertView+TBTTBTBlockExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+TBTTBTBlockExtention.h"; sourceTree = "<group>"; };
+		9557074A18DE7CF300542E88 /* UIAlertView+TBTBlockExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+TBTBlockExtention.m"; sourceTree = "<group>"; };
+		9557074B18DE7CF300542E88 /* UIAlertView+TBTBlockExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+TBTBlockExtention.h"; sourceTree = "<group>"; };
 		9557074C18DE7CF300542E88 /* UIButton+TBTToggleExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+TBTToggleExtention.h"; sourceTree = "<group>"; };
 		9557074D18DE7CF300542E88 /* UIButton+TBTToggleExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+TBTToggleExtention.m"; sourceTree = "<group>"; };
 		9557074E18DE7CF300542E88 /* UIColor+TBTFastExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+TBTFastExtention.h"; sourceTree = "<group>"; };
@@ -110,18 +108,14 @@
 		9557075F18DE7CF300542E88 /* UIView+TBTProperyExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TBTProperyExtention.m"; sourceTree = "<group>"; };
 		9557076018DE7CF300542E88 /* UIViewController+TBTRapidWriteExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TBTRapidWriteExtention.h"; sourceTree = "<group>"; };
 		9557076118DE7CF300542E88 /* UIViewController+TBTRapidWriteExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TBTRapidWriteExtention.m"; sourceTree = "<group>"; };
-		9557076318DE7CF300542E88 /* TBTAlertViewBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBTAlertViewBlock.h; sourceTree = "<group>"; };
-		9557076418DE7CF300542E88 /* TBTAlertViewBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBTAlertViewBlock.m; sourceTree = "<group>"; };
 		9557076518DE7CF300542E88 /* TBTCGExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBTCGExtend.h; sourceTree = "<group>"; };
 		9557076618DE7CF300542E88 /* TBTCGExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBTCGExtend.m; sourceTree = "<group>"; };
 		9557076718DE7CF300542E88 /* TBTHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBTHTTPRequest.h; sourceTree = "<group>"; };
 		9557076818DE7CF300542E88 /* TBTHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBTHTTPRequest.m; sourceTree = "<group>"; };
 		9557076918DE7CF300542E88 /* TBTLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBTLogger.h; sourceTree = "<group>"; };
-		9557076A18DE7CF300542E88 /* TBToaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBToaster.h; sourceTree = "<group>"; };
-		9557076B18DE7CF300542E88 /* TBToaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBToaster.m; sourceTree = "<group>"; };
+		9557076A18DE7CF300542E88 /* TBTToaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBTToaster.h; sourceTree = "<group>"; };
+		9557076B18DE7CF300542E88 /* TBTToaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBTToaster.m; sourceTree = "<group>"; };
 		9557076C18DE7CF300542E88 /* TBTRapid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBTRapid.h; sourceTree = "<group>"; };
-		9557076D18DE7CF300542E88 /* TBTSingletonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBTSingletonBase.h; sourceTree = "<group>"; };
-		9557076E18DE7CF300542E88 /* TBTSingletonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBTSingletonBase.m; sourceTree = "<group>"; };
 		9557076F18DE7CF300542E88 /* TBTSingletonMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBTSingletonMacro.h; sourceTree = "<group>"; };
 		9557077018DE7CF300542E88 /* TBTUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBTUtilities.h; sourceTree = "<group>"; };
 		9557077118DE7CF300542E88 /* TBTVector.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TBTVector.c; sourceTree = "<group>"; };
@@ -197,8 +191,8 @@
 				9557074718DE7CF300542E88 /* NSURLRequest+TBTFaster.h */,
 				9557074818DE7CF300542E88 /* NSURLRequest+TBTFaster.m */,
 				9557074918DE7CF300542E88 /* TBTCategories.h */,
-				9557074A18DE7CF300542E88 /* UIAlertView+BlockExtention.m */,
-				9557074B18DE7CF300542E88 /* UIAlertView+TBTTBTBlockExtention.h */,
+				9557074A18DE7CF300542E88 /* UIAlertView+TBTBlockExtention.m */,
+				9557074B18DE7CF300542E88 /* UIAlertView+TBTBlockExtention.h */,
 				9557074C18DE7CF300542E88 /* UIButton+TBTToggleExtention.h */,
 				9557074D18DE7CF300542E88 /* UIButton+TBTToggleExtention.m */,
 				9557074E18DE7CF300542E88 /* UIColor+TBTFastExtention.h */,
@@ -229,18 +223,14 @@
 		9557076218DE7CF300542E88 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				9557076318DE7CF300542E88 /* TBTAlertViewBlock.h */,
-				9557076418DE7CF300542E88 /* TBTAlertViewBlock.m */,
 				9557076518DE7CF300542E88 /* TBTCGExtend.h */,
 				9557076618DE7CF300542E88 /* TBTCGExtend.m */,
 				9557076718DE7CF300542E88 /* TBTHTTPRequest.h */,
 				9557076818DE7CF300542E88 /* TBTHTTPRequest.m */,
 				9557076918DE7CF300542E88 /* TBTLogger.h */,
-				9557076A18DE7CF300542E88 /* TBToaster.h */,
-				9557076B18DE7CF300542E88 /* TBToaster.m */,
+				9557076A18DE7CF300542E88 /* TBTToaster.h */,
+				9557076B18DE7CF300542E88 /* TBTToaster.m */,
 				9557076C18DE7CF300542E88 /* TBTRapid.h */,
-				9557076D18DE7CF300542E88 /* TBTSingletonBase.h */,
-				9557076E18DE7CF300542E88 /* TBTSingletonBase.m */,
 				9557076F18DE7CF300542E88 /* TBTSingletonMacro.h */,
 				9557077018DE7CF300542E88 /* TBTUtilities.h */,
 				9557077118DE7CF300542E88 /* TBTVector.c */,
@@ -438,12 +428,10 @@
 				9557077618DE7CF300542E88 /* NSArray+TBTShuffle.m in Sources */,
 				9557077A18DE7CF300542E88 /* NSString+TBTString.m in Sources */,
 				9557077D18DE7CF300542E88 /* NSURLRequest+TBTFaster.m in Sources */,
-				9557078A18DE7CF300542E88 /* TBTAlertViewBlock.m in Sources */,
 				9557078218DE7CF300542E88 /* UIResponder+TBTAppDelegateExtention.m in Sources */,
 				9557077B18DE7CF300542E88 /* NSURLConnection+TBTConnectionParameterExtention.m in Sources */,
 				9557078418DE7CF300542E88 /* UIScrollView+TBTZoomingExtention.m in Sources */,
-				9557078D18DE7CF300542E88 /* TBToaster.m in Sources */,
-				9557078E18DE7CF300542E88 /* TBTSingletonBase.m in Sources */,
+				9557078D18DE7CF300542E88 /* TBTToaster.m in Sources */,
 				9557077918DE7CF300542E88 /* NSMutableURLRequest+TBTPostRequestExtention.m in Sources */,
 				9557077F18DE7CF300542E88 /* UIButton+TBTToggleExtention.m in Sources */,
 				9557078118DE7CF300542E88 /* UILabel+TBTLabelExtend.m in Sources */,
@@ -451,7 +439,7 @@
 				9557077C18DE7CF300542E88 /* NSURLConnection+TBTDelegateProxyExtention.m in Sources */,
 				9557077518DE7CF300542E88 /* NSArray+TBTNonObjectExtention.m in Sources */,
 				9557078C18DE7CF300542E88 /* TBTHTTPRequest.m in Sources */,
-				9557077E18DE7CF300542E88 /* UIAlertView+BlockExtention.m in Sources */,
+				9557077E18DE7CF300542E88 /* UIAlertView+TBTBlockExtention.m in Sources */,
 				95871B0618DE7B9B00B93E33 /* AppDelegate.m in Sources */,
 				9557078818DE7CF300542E88 /* UIView+TBTProperyExtention.m in Sources */,
 				9557078518DE7CF300542E88 /* UIView+TBTAnimationExtention.m in Sources */,

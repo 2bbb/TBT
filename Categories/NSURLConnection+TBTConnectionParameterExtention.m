@@ -1,14 +1,30 @@
+/* **** **** **** **** **** **** **** **** **** **** **** **** *
+ *.............................................................*
+ *...........▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄..............*
+ *..........▐░░░░░░░░░░░▌▐░░░░░░░░░░▌▐░░░░░░░░░░░▌.............*
+ *...........▀▀▀▀█░█▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌▀▀▀▀█░█▀▀▀▀..............*
+ *...............▐░▌.....▐░▌.......▐░▌....▐░▌..................*
+ *...............▐░▌.....▐░█▄▄▄▄▄▄▄█░▌....▐░▌..................*
+ *...............▐░▌.....▐░░░░░░░░░░▌.....▐░▌..................*
+ *...............▐░▌.....▐░█▀▀▀▀▀▀▀█░▌....▐░▌..................*
+ *...............▐░▌.....▐░▌.......▐░▌....▐░▌..................*
+ *...............▐░▌.....▐░█▄▄▄▄▄▄▄█░▌....▐░▌..................*
+ *...............▐░▌.....▐░░░░░░░░░░▌.....▐░▌..................*
+ *................▀.......▀▀▀▀▀▀▀▀▀▀.......▀...................*
+ *.............................................................*
+ * **** **** **** **** **** **** **** **** **** **** **** **** */
+
 //
-//  NSURLConnection+ConnectionParameterExtention.m
+//  NSURLConnection+TBTConnectionParameterExtention.m
 //  Gatsby
 //
 //  Created by ISHII Tsuubito on 2013/08/27.
 //  Copyright (c) 2013年 buffer Renaiss co., ltd. All rights reserved.
 //
 
-#import "NSURLConnection+ConnectionParameterExtention.h"
+#import "NSURLConnection+TBTConnectionParameterExtention.h"
 
-@implementation NSURLConnection (ConnectionParameterExtention)
+@implementation NSURLConnection (TBTConnectionParameterExtention)
 
 - (NSString *)originalRequestURLString {
     return [[[self originalRequest] URL] absoluteString];

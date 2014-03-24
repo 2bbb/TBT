@@ -1,7 +1,7 @@
 //
-//  NSURLRequest+TBFaster.h
+//  NSURLRequest+TBTFaster.h
 //
-//  Created by ISHII Tsuubito on 12/10/13.
+//  Created by ISHII 2bit on 12/10/13.
 //  Copyright (c) 2012 buffer Renaiss co., ltd. All rights reserved.
 //
 
@@ -9,7 +9,7 @@
 
 #pragma mark Immutable
 
-@interface NSURLRequest (TBFaster)
+@interface NSURLRequest (TBTFaster)
 
 + (id)requestWithURLString:(NSString *)urlString;
 
@@ -17,7 +17,7 @@
 
 #pragma mark Mutable
 
-@interface NSMutableURLRequest (TBFaster)
+@interface NSMutableURLRequest (TBTFaster)
 
 + (id)requestWithURLString:(NSString *)urlString;
 - (void)setHTTPBodyDictionary:(NSDictionary *)parameter;

@@ -1,13 +1,29 @@
+/* **** **** **** **** **** **** **** **** **** **** **** **** *
+ *.............................................................*
+ *...........▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄..............*
+ *..........▐░░░░░░░░░░░▌▐░░░░░░░░░░▌▐░░░░░░░░░░░▌.............*
+ *...........▀▀▀▀█░█▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌▀▀▀▀█░█▀▀▀▀..............*
+ *...............▐░▌.....▐░▌.......▐░▌....▐░▌..................*
+ *...............▐░▌.....▐░█▄▄▄▄▄▄▄█░▌....▐░▌..................*
+ *...............▐░▌.....▐░░░░░░░░░░▌.....▐░▌..................*
+ *...............▐░▌.....▐░█▀▀▀▀▀▀▀█░▌....▐░▌..................*
+ *...............▐░▌.....▐░▌.......▐░▌....▐░▌..................*
+ *...............▐░▌.....▐░█▄▄▄▄▄▄▄█░▌....▐░▌..................*
+ *...............▐░▌.....▐░░░░░░░░░░▌.....▐░▌..................*
+ *................▀.......▀▀▀▀▀▀▀▀▀▀.......▀...................*
+ *.............................................................*
+ * **** **** **** **** **** **** **** **** **** **** **** **** */
+
 //
-//  NSDictionary+TBNonObjectExtention.m
+//  NSDictionary+TBTNonObjectExtention.m
 //
 //  Created by ISHII Tsuubito on 12/10/18.
 //  Copyright (c) 2012 buffer Renaiss co., ltd. All rights reserved.
 //
 
-#import "NSDictionary+TBNonObjectExtention.h"
+#import "NSDictionary+TBTNonObjectExtention.h"
 
-@implementation NSDictionary (TBNonObjectExtention)
+@implementation NSDictionary (TBTNonObjectExtention)
 
 - (BOOL)boolForKey:(id)key {
     return [[self objectForKey:key] boolValue];
@@ -101,7 +117,7 @@
 
 @end
 
-@implementation NSMutableDictionary (TBNonObjectExtention)
+@implementation NSMutableDictionary (TBTNonObjectExtention)
 
 - (void)setBool:(BOOL)value forKey:(id<NSCopying>)key {
     [self setObject:[NSNumber numberWithBool:value] forKey:key];

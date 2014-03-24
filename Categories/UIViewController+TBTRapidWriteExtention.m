@@ -1,12 +1,28 @@
+/* **** **** **** **** **** **** **** **** **** **** **** **** *
+ *.............................................................*
+ *...........▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄..............*
+ *..........▐░░░░░░░░░░░▌▐░░░░░░░░░░▌▐░░░░░░░░░░░▌.............*
+ *...........▀▀▀▀█░█▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌▀▀▀▀█░█▀▀▀▀..............*
+ *...............▐░▌.....▐░▌.......▐░▌....▐░▌..................*
+ *...............▐░▌.....▐░█▄▄▄▄▄▄▄█░▌....▐░▌..................*
+ *...............▐░▌.....▐░░░░░░░░░░▌.....▐░▌..................*
+ *...............▐░▌.....▐░█▀▀▀▀▀▀▀█░▌....▐░▌..................*
+ *...............▐░▌.....▐░▌.......▐░▌....▐░▌..................*
+ *...............▐░▌.....▐░█▄▄▄▄▄▄▄█░▌....▐░▌..................*
+ *...............▐░▌.....▐░░░░░░░░░░▌.....▐░▌..................*
+ *................▀.......▀▀▀▀▀▀▀▀▀▀.......▀...................*
+ *.............................................................*
+ * **** **** **** **** **** **** **** **** **** **** **** **** */
+
 //
 //  UIViewController+RapidWriteExtention.m
 //
-//  Created by ISHII Tsuubito on 12/10/17.
+//  Created by ISHII 2bit on 12/10/17.
 //  Copyright (c) 2012 buffer Renaiss co., ltd. All rights reserved.
 //
 
-#import "UIViewController+RapidWriteExtention.h"
-#import "UIView+ProperyExtention.h"
+#import "UIViewController+TBTRapidWriteExtention.h"
+#import "UIView+TBTProperyExtention.h"
 #import <QuartzCore/QuartzCore.h>
 
 #ifndef LogTrace
@@ -17,7 +33,7 @@
 #define LogWarning NSLog
 #endif
 
-@implementation UIViewController (RapidWriteExtention)
+@implementation UIViewController (TBTRapidWriteExtention)
 
 + (id)viewControllerWithNibName:(NSString *)nibName {
     return [[[self alloc] initWithNibName:nibName bundle:nil] autorelease];

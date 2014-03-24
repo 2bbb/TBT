@@ -1,12 +1,28 @@
+/* **** **** **** **** **** **** **** **** **** **** **** **** *
+ *.............................................................*
+ *...........▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄..............*
+ *..........▐░░░░░░░░░░░▌▐░░░░░░░░░░▌▐░░░░░░░░░░░▌.............*
+ *...........▀▀▀▀█░█▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌▀▀▀▀█░█▀▀▀▀..............*
+ *...............▐░▌.....▐░▌.......▐░▌....▐░▌..................*
+ *...............▐░▌.....▐░█▄▄▄▄▄▄▄█░▌....▐░▌..................*
+ *...............▐░▌.....▐░░░░░░░░░░▌.....▐░▌..................*
+ *...............▐░▌.....▐░█▀▀▀▀▀▀▀█░▌....▐░▌..................*
+ *...............▐░▌.....▐░▌.......▐░▌....▐░▌..................*
+ *...............▐░▌.....▐░█▄▄▄▄▄▄▄█░▌....▐░▌..................*
+ *...............▐░▌.....▐░░░░░░░░░░▌.....▐░▌..................*
+ *................▀.......▀▀▀▀▀▀▀▀▀▀.......▀...................*
+ *.............................................................*
+ * **** **** **** **** **** **** **** **** **** **** **** **** */
+
 //
-//  NSMutableURLRequest+PostRequestExtention.m
+//  NSMutableURLRequest+TBTPostRequestExtention.m
 //  TBUtilitiesExample
 //
 //  Created by ISHII 2bit on 2013/08/18.
 //  Copyright (c) 2013年 buffer Renaiss. All rights reserved.
 //
 
-#import "NSMutableURLRequest+PostRequestExtention.h"
+#import "NSMutableURLRequest+TBTPostRequestExtention.h"
 
 #import "NSURLRequest+TBFaster.h"
 #import "NSURLConnection+DelegateProxyExtention.h"
@@ -18,7 +34,7 @@ NSString * const kPostFileData = @"PostFileData";
 NSString * const kPostFileName = @"PostFileName";
 NSString * const kPostFileMimeType = @"PostFileType";
 
-@implementation NSMutableURLRequest (PostRequestExtention)
+@implementation NSMutableURLRequest (TBTPostRequestExtention)
 
 + (NSMutableURLRequest *)postRequestForURL:(NSString *)urlString
                         withPostParameters:(NSDictionary *)postParameters

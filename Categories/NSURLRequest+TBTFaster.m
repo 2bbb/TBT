@@ -1,15 +1,15 @@
 //
-//  NSURLRequest+TBFaster.m
+//  NSURLRequest+TBTFaster.m
 //
-//  Created by ISHII Tsuubito on 12/10/13.
+//  Created by ISHII 2bit on 12/10/13.
 //  Copyright (c) 2012 buffer Renaiss co., ltd. All rights reserved.
 //
 
-#import "NSURLRequest+TBFaster.h"
+#import "NSURLRequest+TBTFaster.h"
 
 #pragma mark Immutable
 
-@implementation NSURLRequest (TBFaster)
+@implementation NSURLRequest (TBTFaster)
 
 + (id)requestWithURLString:(NSString *)urlString {
     return [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
@@ -19,7 +19,7 @@
 
 #pragma mark Mutable
 
-@implementation NSMutableURLRequest (TBFaster)
+@implementation NSMutableURLRequest (TBTFaster)
 
 + (id)requestWithURLString:(NSString *)urlString {
     return [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlString]];

@@ -1,6 +1,21 @@
+/* **** **** **** **** **** **** **** **** **** **** **** **** *
+ *.............................................................*
+ *...........▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄..............*
+ *..........▐░░░░░░░░░░░▌▐░░░░░░░░░░▌▐░░░░░░░░░░░▌.............*
+ *...........▀▀▀▀█░█▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌▀▀▀▀█░█▀▀▀▀..............*
+ *...............▐░▌.....▐░▌.......▐░▌....▐░▌..................*
+ *...............▐░▌.....▐░█▄▄▄▄▄▄▄█░▌....▐░▌..................*
+ *...............▐░▌.....▐░░░░░░░░░░▌.....▐░▌..................*
+ *...............▐░▌.....▐░█▀▀▀▀▀▀▀█░▌....▐░▌..................*
+ *...............▐░▌.....▐░▌.......▐░▌....▐░▌..................*
+ *...............▐░▌.....▐░█▄▄▄▄▄▄▄█░▌....▐░▌..................*
+ *...............▐░▌.....▐░░░░░░░░░░▌.....▐░▌..................*
+ *................▀.......▀▀▀▀▀▀▀▀▀▀.......▀...................*
+ *.............................................................*
+ * **** **** **** **** **** **** **** **** **** **** **** **** */
+
 //
 //  TBHTTPRequest.h
-//  TBUtilities
 //
 //  Created by ISHII 2bit on 12/09/18.
 //  Copyright (c) 2012 buffer Renaiss. All rights reserved.
@@ -8,23 +23,23 @@
 
 #import <Foundation/Foundation.h>
 
-@class TBHTTPRequest;
+@class TBTHTTPRequest;
 
-@protocol TBHTTPRequestDelegate <NSObject>
+@protocol TBTHTTPRequestDelegate <NSObject>
 
 @required
 
-- (void)requestSuccess:(TBHTTPRequest *)request;
+- (void)requestSuccess:(TBTHTTPRequest *)request;
 
 @optional
 
-- (void)requestFailure:(TBHTTPRequest *)request withError:(NSError *)error;
-- (void)authenticationChallengeFailured:(TBHTTPRequest *)request;
+- (void)requestFailure:(TBTHTTPRequest *)request withError:(NSError *)error;
+- (void)authenticationChallengeFailured:(TBTHTTPRequest *)request;
 
 @end
 
-@interface TBHTTPRequest : NSObject {
-	id<TBHTTPRequestDelegate> delegate;
+@interface TBTHTTPRequest : NSObject {
+	id<TBTHTTPRequestDelegate> delegate;
 	BOOL isVerbose;
 	
 	SEL successSelector;
@@ -51,9 +66,9 @@
 #pragma mark -
 #pragma mark Initialize for delegate pattern
 
-- (id)initWithDelegate:(id<TBHTTPRequestDelegate>)_delegate
+- (id)initWithDelegate:(id<TBTHTTPRequestDelegate>)_delegate
 			identifier:(id)_identifier;
-- (void)setDelegate:(id<TBHTTPRequestDelegate>)_delegate;
+- (void)setDelegate:(id<TBTHTTPRequestDelegate>)_delegate;
 
 #pragma mark Initialize for target/selector pattern
 
@@ -68,11 +83,11 @@
 #pragma mark Convinience for GET
 
 + (id)getRequestForURL:(NSString *)urlString
-		  withDelegate:(id<TBHTTPRequestDelegate>)_delegate
+		  withDelegate:(id<TBTHTTPRequestDelegate>)_delegate
 		  andParameter:(NSDictionary *)parameter
 			identifier:(id)_identifier;
 + (id)postRequestForURL:(NSString *)urlString
-		   withDelegate:(id<TBHTTPRequestDelegate>)_delegate
+		   withDelegate:(id<TBTHTTPRequestDelegate>)_delegate
 		   andParameter:(NSDictionary *)parameter
 			 identifier:(id)_identifier;
 

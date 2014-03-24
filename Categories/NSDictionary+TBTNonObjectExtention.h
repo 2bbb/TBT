@@ -1,5 +1,21 @@
+/* **** **** **** **** **** **** **** **** **** **** **** **** *
+ *.............................................................*
+ *...........▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄..............*
+ *..........▐░░░░░░░░░░░▌▐░░░░░░░░░░▌▐░░░░░░░░░░░▌.............*
+ *...........▀▀▀▀█░█▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌▀▀▀▀█░█▀▀▀▀..............*
+ *...............▐░▌.....▐░▌.......▐░▌....▐░▌..................*
+ *...............▐░▌.....▐░█▄▄▄▄▄▄▄█░▌....▐░▌..................*
+ *...............▐░▌.....▐░░░░░░░░░░▌.....▐░▌..................*
+ *...............▐░▌.....▐░█▀▀▀▀▀▀▀█░▌....▐░▌..................*
+ *...............▐░▌.....▐░▌.......▐░▌....▐░▌..................*
+ *...............▐░▌.....▐░█▄▄▄▄▄▄▄█░▌....▐░▌..................*
+ *...............▐░▌.....▐░░░░░░░░░░▌.....▐░▌..................*
+ *................▀.......▀▀▀▀▀▀▀▀▀▀.......▀...................*
+ *.............................................................*
+ * **** **** **** **** **** **** **** **** **** **** **** **** */
+
 //
-//  NSDictionary+TBNonObjectExtention.h
+//  NSDictionary+TBTNonObjectExtention.h
 //
 //  Created by ISHII Tsuubito on 12/10/18.
 //  Copyright (c) 2012 buffer Renaiss co., ltd. All rights reserved.
@@ -7,7 +23,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSDictionary (TBNonObjectExtention)
+@interface NSDictionary (TBTNonObjectExtention)
 
 - (BOOL)boolForKey:(id)key;
 - (char)charForKey:(id)key;
@@ -36,7 +52,7 @@
 
 @end
 
-@interface NSMutableDictionary (TBNonObjectExtention)
+@interface NSMutableDictionary (TBTNonObjectExtention)
 
 - (void)setBool:(BOOL)value forKey:(id<NSCopying>)key;
 - (void)setChar:(char)value forKey:(id<NSCopying>)key;

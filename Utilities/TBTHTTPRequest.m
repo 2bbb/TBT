@@ -1,12 +1,27 @@
+/* **** **** **** **** **** **** **** **** **** **** **** **** *
+ *.............................................................*
+ *...........▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄..............*
+ *..........▐░░░░░░░░░░░▌▐░░░░░░░░░░▌▐░░░░░░░░░░░▌.............*
+ *...........▀▀▀▀█░█▀▀▀▀ ▐░█▀▀▀▀▀▀▀█░▌▀▀▀▀█░█▀▀▀▀..............*
+ *...............▐░▌.....▐░▌.......▐░▌....▐░▌..................*
+ *...............▐░▌.....▐░█▄▄▄▄▄▄▄█░▌....▐░▌..................*
+ *...............▐░▌.....▐░░░░░░░░░░▌.....▐░▌..................*
+ *...............▐░▌.....▐░█▀▀▀▀▀▀▀█░▌....▐░▌..................*
+ *...............▐░▌.....▐░▌.......▐░▌....▐░▌..................*
+ *...............▐░▌.....▐░█▄▄▄▄▄▄▄█░▌....▐░▌..................*
+ *...............▐░▌.....▐░░░░░░░░░░▌.....▐░▌..................*
+ *................▀.......▀▀▀▀▀▀▀▀▀▀.......▀...................*
+ *.............................................................*
+ * **** **** **** **** **** **** **** **** **** **** **** **** */
+
 //
-//  TBHTTPRequest.m
-//  TBUtilities
+//  TBTHTTPRequest.m
 //
 //  Created by ISHII 2bit on 12/09/18.
 //  Copyright (c) 2012 buffer Renaiss. All rights reserved.
 //
 
-#import "TBHTTPRequest.h"
+#import "TBTHTTPRequest.h"
 
 #ifndef __TBLogger_h__
 #ifndef __TBLoggerDummy_h__
@@ -27,9 +42,9 @@
 #endif
 #endif
 
-@implementation TBHTTPRequest
+@implementation TBTHTTPRequest
 
-- (id)initWithDelegate:(id<TBHTTPRequestDelegate>)_delegate
+- (id)initWithDelegate:(id<TBTHTTPRequestDelegate>)_delegate
 			identifier:(id)_identifier
 {
 	if(self = [super init]) {
@@ -49,7 +64,7 @@
 	return self;
 }
 
-- (void)setDelegate:(id<TBHTTPRequestDelegate>)_delegate {
+- (void)setDelegate:(id<TBTHTTPRequestDelegate>)_delegate {
 	delegate = _delegate;
 }
 
@@ -89,11 +104,11 @@
 }
 
 + (id)getRequestForURL:(NSString *)urlString
-		  withDelegate:(id<TBHTTPRequestDelegate>)_delegate
+		  withDelegate:(id<TBTHTTPRequestDelegate>)_delegate
 		  andParameter:(NSDictionary *)parameters
 			identifier:(id)_identifier;
 {
-	TBHTTPRequest *request = [[TBHTTPRequest alloc] initWithDelegate:_delegate identifier:_identifier];
+	TBTHTTPRequest *request = [[TBTHTTPRequest alloc] initWithDelegate:_delegate identifier:_identifier];
 	[request setURL:urlString];
 	[request addParameters:parameters];
 	[request sendRequest];
@@ -101,11 +116,11 @@
 }
 
 + (id)postRequestForURL:(NSString *)urlString
-		   withDelegate:(id<TBHTTPRequestDelegate>)_delegate
+		   withDelegate:(id<TBTHTTPRequestDelegate>)_delegate
 		   andParameter:(NSDictionary *)parameters
 			 identifier:(id)_identifier;
 {
-	TBHTTPRequest *request = [[TBHTTPRequest alloc] initWithDelegate:_delegate identifier:_identifier];
+	TBTHTTPRequest *request = [[TBTHTTPRequest alloc] initWithDelegate:_delegate identifier:_identifier];
 	[request setURL:urlString];
 	[request setPost:YES];
 	[request addParameters:parameters];
