@@ -36,7 +36,7 @@
 @implementation UIViewController (TBTRapidWriteExtention)
 
 + (id)viewControllerWithNibName:(NSString *)nibName {
-    return [[[self alloc] initWithNibName:nibName bundle:nil] autorelease];
+    return [[self alloc] initWithNibName:nibName bundle:nil];
 }
 
 + (id)viewController {
@@ -108,12 +108,12 @@ const static NSInteger _kIndicatorWrapperTag = 11195;
 const static NSInteger _kIndicatorTag = 11196;
 
 - (void)createActivityIndicatorView {
-    UIView *view = [[[UIView alloc] initWithFrame:[self view].bounds] autorelease];
+    UIView *view = [[UIView alloc] initWithFrame:[self view].bounds];
     [view setBackgroundColor:[UIColor colorWithRed:0.0f
                                              green:0.0f
                                               blue:0.0f
                                              alpha:0.6f]];
-    UIActivityIndicatorView *ai = [[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge] autorelease];
+    UIActivityIndicatorView *ai = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     [view addSubview:ai];
     ai.centerX = view.width * 0.5f;
     ai.centerY = view.height * 0.5f;
@@ -128,6 +128,8 @@ const static NSInteger _kIndicatorTag = 11196;
                      completion:^(BOOL _) {
                          [ai startAnimating];
                      }];
+    ai = nil;
+    view = nil;
 }
 
 - (void)destroyActivityIndicatorView {

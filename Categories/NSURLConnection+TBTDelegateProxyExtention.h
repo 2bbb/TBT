@@ -35,7 +35,7 @@ extern NSString *NSURLRequestMethodDELETE;
 <
     NSURLConnectionDelegate
 > {
-    NSURLConnectionDownloadCompletionBlock block;
+    __strong NSURLConnectionDownloadCompletionBlock block;
 }
 
 - (id)initWithCompletionBlock:(NSURLConnectionDownloadCompletionBlock)block;

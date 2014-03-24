@@ -26,6 +26,10 @@
 
 #import "NSString+TBTString.h"
 
+#ifndef LogError
+#define LogError NSLog
+#endif
+
 @implementation NSString (TBTString)
 
 - (BOOL) isEmpty {
@@ -37,7 +41,7 @@
 }
 
 - (NSString *)escapeHtml {
-	NSMutableString *string = [[self mutableCopy] autorelease];
+	NSMutableString *string = [self mutableCopy];
 	[string replaceOccurrencesOfString:@"&" withString:@"&amp;" options:NSLiteralSearch range:NSMakeRange(0, [string length])];
 	[string replaceOccurrencesOfString:@"<" withString:@"&lt;" options:NSLiteralSearch range:NSMakeRange(0, [string length])];
 	[string replaceOccurrencesOfString:@">" withString:@"&gt;" options:NSLiteralSearch range:NSMakeRange(0, [string length])];
@@ -46,7 +50,7 @@
 }
 
 - (NSString *)unescapeHtml {
-	NSMutableString *string = [[self mutableCopy] autorelease];
+	NSMutableString *string = [self mutableCopy];
 	[string replaceOccurrencesOfString:@"&quot;" withString:@"\"" options:NSLiteralSearch range:NSMakeRange(0, [string length])];
 	[string replaceOccurrencesOfString:@"&gt;" withString:@">" options:NSLiteralSearch range:NSMakeRange(0, [string length])];
 	[string replaceOccurrencesOfString:@"&lt;" withString:@"<" options:NSLiteralSearch range:NSMakeRange(0, [string length])];
@@ -55,7 +59,7 @@
 }
 
 - (NSString *)urlEncode {
-	NSMutableString *string = [[self mutableCopy] autorelease];
+	NSMutableString *string = [self mutableCopy];
 	[string replaceOccurrencesOfString:@"%" withString:@"%25" options:NSLiteralSearch range:NSMakeRange(0, [string length])];
 	[string replaceOccurrencesOfString:@";" withString:@"%3B" options:NSLiteralSearch range:NSMakeRange(0, [string length])];
 	[string replaceOccurrencesOfString:@"/" withString:@"%2F" options:NSLiteralSearch range:NSMakeRange(0, [string length])];
@@ -79,7 +83,7 @@
 }
 
 - (NSString *)urlDecode {
-	NSMutableString *string = [[self mutableCopy] autorelease];
+	NSMutableString *string = [self mutableCopy];
 	[string replaceOccurrencesOfString:@"%2A" withString:@"*" options:NSLiteralSearch range:NSMakeRange(0, [string length])];
 	[string replaceOccurrencesOfString:@"%29" withString:@")" options:NSLiteralSearch range:NSMakeRange(0, [string length])];
 	[string replaceOccurrencesOfString:@"%28" withString:@"(" options:NSLiteralSearch range:NSMakeRange(0, [string length])];
@@ -137,8 +141,8 @@
         LogError(@"[NSString jsonStringFromObject:] Error: %@", error);
         return nil;
     }
-    NSString *playbackDataStringify = [[[NSString alloc] initWithData:jsonData
-                                                             encoding:NSUTF8StringEncoding] autorelease];
+    NSString *playbackDataStringify = [[NSString alloc] initWithData:jsonData
+                                                            encoding:NSUTF8StringEncoding];
     return playbackDataStringify;
 }
 

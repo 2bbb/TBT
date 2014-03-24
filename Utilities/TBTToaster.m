@@ -48,7 +48,7 @@
     label.centerY = toastView.height / 2;
     [toastView addSubview:label];
     [[toastView layer] setCornerRadius:8.0f];
-    [label release];
+    label = nil;
     __block UIView *tmpView;
     
     CGRect frame = [targetView bounds];
@@ -62,7 +62,7 @@
         toastView.centerY = frameView.height / 2;
         [frameView addSubview:toastView];
         tmpView = frameView;
-        [toastView release];
+        toastView = nil;
     } else {
         tmpView = toastView;
     }
@@ -77,7 +77,7 @@
                      }
                      completion:^(BOOL finished) {
                          [tmpView removeFromSuperview];
-                         [tmpView release];
+                         tmpView = nil;
                      }];
 }
 

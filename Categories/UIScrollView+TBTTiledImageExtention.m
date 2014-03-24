@@ -32,7 +32,7 @@
     CGFloat horizontalOffset = isHorizontal ? size.width : 0.0f;
     CGFloat verticalOffset = isHorizontal ? 0.0f : size.height;
     
-    NSMutableArray *array = [[[NSMutableArray alloc] initWithCapacity:num] autorelease];
+    NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:num];
     
     for(int i = 0; i < num; i++) {
         CGRect frame;
@@ -42,12 +42,12 @@
         ai.center = CGPointMake(frame.origin.x + size.width / 2, frame.origin.y + size.height / 2);
         [self addSubview:ai];
         [ai startAnimating];
-        [ai release];
+        ai = nil;
         
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:frame];
         [self addSubview:imageView];
         [array addObject:imageView];
-        [imageView release];
+        imageView = nil;
     }
     
     [self setPagingEnabled:YES];
@@ -75,12 +75,12 @@
             ai.center = CGPointMake(frame.origin.x + size.width / 2, frame.origin.y + size.height / 2);
             [self addSubview:ai];
             [ai startAnimating];
-            [ai release];
+            ai = nil;
             
             UIImageView *imageView = [[UIImageView alloc] initWithFrame:frame];
             [self addSubview:imageView];
             [columnArray addObject:imageView];
-            [imageView release];
+            imageView = nil;
         }
         [rowArray addObject:[NSArray arrayWithArray:columnArray]];
     }

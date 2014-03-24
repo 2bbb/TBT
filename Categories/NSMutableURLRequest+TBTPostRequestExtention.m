@@ -24,8 +24,8 @@
 
 #import "NSMutableURLRequest+TBTPostRequestExtention.h"
 
-#import "NSURLRequest+TBFaster.h"
-#import "NSURLConnection+DelegateProxyExtention.h"
+#import "NSURLRequest+TBTFaster.h"
+#import "NSURLConnection+TBTDelegateProxyExtention.h"
 
 static NSString * const boundary = @"NSMURLR_PRE";
 static NSString * const fileBoundary = @"NSMURLR_PRE_FILE";

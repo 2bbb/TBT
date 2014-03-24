@@ -48,7 +48,7 @@ NSString *NSURLRequestMethodDELETE = @"DELETE";
 
 - (id)initWithCompletionBlock:(NSURLConnectionDownloadCompletionBlock)_block {
     if(self = [super init]) {
-        block = [_block retain];
+        block = _block;
     }
     
     return self;

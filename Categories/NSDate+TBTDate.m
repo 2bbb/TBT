@@ -29,7 +29,7 @@
 @implementation NSDate (TBDate)
 
 + (NSInteger)getDay:(NSDate *)date {
-	NSCalendar* cal = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
+	NSCalendar* cal = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
 	unsigned int unitFlags = NSYearCalendarUnit |
 	NSMonthCalendarUnit |
 	NSDayCalendarUnit |
@@ -38,12 +38,14 @@
 	NSSecondCalendarUnit;
 	NSDateComponents *components = [cal components:unitFlags fromDate:date];
 	NSInteger day = [components day];
-	
+    
+	cal = nil;
+    
 	return day;
 }
 
 + (NSInteger)getMonth:(NSDate *)date {
-	NSCalendar* cal = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
+	NSCalendar* cal = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
 	unsigned int unitFlags = NSYearCalendarUnit |
 	NSMonthCalendarUnit |
 	NSDayCalendarUnit |
@@ -53,11 +55,13 @@
 	NSDateComponents *components = [cal components:unitFlags fromDate:date];
 	NSInteger month = [components month];
 	
+    cal = nil;
+    
 	return month;
 }
 
 + (NSInteger)getYear:(NSDate *)date {
-	NSCalendar* cal = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
+	NSCalendar* cal = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
 	unsigned int unitFlags = NSYearCalendarUnit |
 	NSMonthCalendarUnit |
 	NSDayCalendarUnit |
@@ -67,21 +71,26 @@
 	NSDateComponents *components = [cal components:unitFlags fromDate:date];
 	NSInteger year = [components year];
 	
+    cal = nil;
+    
 	return year;
 }
 
 + (NSDateComponents *)timeComponents {
-	NSCalendar* cal = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
+	NSCalendar* cal = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
 	unsigned int unitFlags = NSHourCalendarUnit |
 	NSMinuteCalendarUnit |
 	NSSecondCalendarUnit;
+    
+    cal = nil;
+    
 	return [cal components:unitFlags fromDate:[NSDate date]];
 }
 
 + (NSDictionary *)getCalenderDatas:(NSDate *)date {
-	NSMutableDictionary *dict = [[[NSMutableDictionary alloc] initWithCapacity:6] autorelease];
+	NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithCapacity:6];
 	
-	NSCalendar* cal = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
+	NSCalendar* cal = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
 	unsigned int unitFlags = NSYearCalendarUnit |
 	NSMonthCalendarUnit |
 	NSDayCalendarUnit |
@@ -97,6 +106,8 @@
 	[dict setObject:@([components minute]) forKey:@"minute"];
 	[dict setObject:@([components second]) forKey:@"second"];
 	
+    cal = nil;
+    
 	return [NSDictionary dictionaryWithDictionary:dict];
 }
 

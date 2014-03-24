@@ -48,7 +48,7 @@
 	SEL failureSelector;
 	id failureTarget;
 	
-	SEL authenticateFailureSelector;
+	__strong SEL authenticateFailureSelector;
 	id authenticateFailureTarget;
 	
 	NSString *urlString;
@@ -59,7 +59,7 @@
 	
 	id identifier;
 	
-	NSHTTPURLResponse *httpURLResponse;
+	__strong NSHTTPURLResponse *httpURLResponse;
 	NSMutableData *receivedData;
 }
 

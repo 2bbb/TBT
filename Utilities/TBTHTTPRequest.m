@@ -112,7 +112,7 @@
 	[request setURL:urlString];
 	[request addParameters:parameters];
 	[request sendRequest];
-	return [request autorelease];
+	return request;
 }
 
 + (id)postRequestForURL:(NSString *)urlString
@@ -125,11 +125,11 @@
 	[request setPost:YES];
 	[request addParameters:parameters];
 	[request sendRequest];
-	return [request autorelease];
+	return request;
 }
 
 - (void)setIdentifier:(id)_identifier {
-	identifier = [_identifier retain];
+	identifier = _identifier;
 }
 
 - (id)identifier {
@@ -240,19 +240,19 @@
 - (NSString *)responseString {
 	NSString *responseString = [[NSString alloc] initWithData:receivedData
 													 encoding:NSUTF8StringEncoding];
-	return [responseString autorelease];
+	return responseString;
 }
 
 - (NSString *)responseStringWithEncoding:(NSStringEncoding)encoding {
 	NSString *responseString = [[NSString alloc] initWithData:receivedData
 													 encoding:encoding];
-	return [responseString autorelease];
+	return responseString;
 }
 
 - (void)connection:(NSURLConnection *)connection
 didReceiveResponse:(NSURLResponse *)response
 {
-    httpURLResponse = [(NSHTTPURLResponse *)response retain];
+    httpURLResponse = (NSHTTPURLResponse *)response;
 	receivedData = [[NSMutableData alloc] initWithCapacity:0];
 	
 	if(isVerbose) {
@@ -329,8 +329,7 @@ didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
 			  [[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]);
 	}
 	
-	[connection release];
-	[receivedData release];
+	connection = nil;
 	receivedData = nil;
 	
 	if(failureTarget && [failureTarget respondsToSelector:failureSelector]) {
@@ -345,7 +344,7 @@ didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
 		LogError(@"Succeeded! Received %d bytes of data", [receivedData length]);
 	}
 	
-	[connection release];
+	connection = nil;
 	if(successTarget && [successTarget respondsToSelector:successSelector]) {
 		[successTarget performSelector:successSelector withObject:self];
 	} else {
@@ -354,15 +353,13 @@ didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
 }
 
 - (void)dealloc {
-	[urlString release];
-	[paramString release];
-	[receivedData release];
-	[httpURLResponse release];
-	[identifier release];
-	[basicUser release];
-	[basicPass release];
-	
-	[super dealloc];
+	urlString = nil;
+	paramString = nil;
+    receivedData = nil;
+	httpURLResponse = nil;
+	identifier = nil;
+	basicUser = nil;
+	basicPass = nil;
 }
 
 @end
