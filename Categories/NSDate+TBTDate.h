@@ -40,4 +40,6 @@
 
 + (NSDictionary *)getCalenderDatas:(NSDate *)date;
 
+- (NSString *)YYYYMMDDhhmmssFormat;
+
 @end

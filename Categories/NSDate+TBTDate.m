@@ -111,4 +111,10 @@
 	return [NSDictionary dictionaryWithDictionary:dict];
 }
 
+- (NSString *)YYYYMMDDhhmmssFormat {
+    NSDictionary *dict = [NSDate getCalenderDatas:self];
+    
+    return [NSString stringWithFormat:@"%04d/%02d/%02d %02d:%02d:%02d", [dict[@"year"] intValue], [dict[@"month"] intValue], [dict[@"day"] intValue], [dict[@"hour"] intValue], [dict[@"minute"] intValue], [dict[@"second"] intValue]];
+}
+
 @end

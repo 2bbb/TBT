@@ -52,13 +52,13 @@
 #import "UIView+TBTAnimationExtention.h"
 #import "UIView+TBTCoreGraphicsExtention.h"
 #import "UIView+TBTDebugExtention.h"
-#import "UIAlertView+TBTBlockExtention.h"
 #import "UILabel+TBTLabelExtend.h"
 #import "UIButton+TBTToggleExtention.h"
 #import "UIViewController+TBTRapidWriteExtention.h"
 #import "UIResponder+TBTAppDelegateExtention.h"
 #import "UIScrollView+TBTTiledImageExtention.h"
 #import "UIScrollView+TBTZoomingExtention.h"
+#import "UIImagePickerController+TBTFastImagePick.h"
 
 /* **** **** **** **** **** **** **** **** **** **** **** **** *
  *.............................................................*
